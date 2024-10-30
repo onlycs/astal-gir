@@ -1977,7 +1977,7 @@ CAUTION: the id might not be the same mapped by the compositor.</doc>
 				<type name="none" c:type="void" />
 			</return-value>
 			<parameters>
-				<instance-parameter name="self" direction="out" transfer-ownership="none" caller-allocates="1">
+				<instance-parameter name="self" direction="in" transfer-ownership="none" caller-allocates="1">
 					<type name="Astal.ClickEvent" c:type="AstalClickEvent*" />
 				</instance-parameter>
 				<parameter name="event" transfer-ownership="none">
@@ -2014,7 +2014,7 @@ CAUTION: the id might not be the same mapped by the compositor.</doc>
 				<type name="none" c:type="void" />
 			</return-value>
 			<parameters>
-				<instance-parameter name="self" direction="out" transfer-ownership="none" caller-allocates="1">
+				<instance-parameter name="self" direction="in" transfer-ownership="none" caller-allocates="1">
 					<type name="Astal.HoverEvent" c:type="AstalHoverEvent*" />
 				</instance-parameter>
 				<parameter name="event" transfer-ownership="none">
@@ -2051,7 +2051,7 @@ CAUTION: the id might not be the same mapped by the compositor.</doc>
 				<type name="none" c:type="void" />
 			</return-value>
 			<parameters>
-				<instance-parameter name="self" direction="out" transfer-ownership="none" caller-allocates="1">
+				<instance-parameter name="self" direction="in" transfer-ownership="none" caller-allocates="1">
 					<type name="Astal.ScrollEvent" c:type="AstalScrollEvent*" />
 				</instance-parameter>
 				<parameter name="event" transfer-ownership="none">
@@ -2079,7 +2079,7 @@ CAUTION: the id might not be the same mapped by the compositor.</doc>
 				<type name="none" c:type="void" />
 			</return-value>
 			<parameters>
-				<instance-parameter name="self" direction="out" transfer-ownership="none" caller-allocates="1">
+				<instance-parameter name="self" direction="in" transfer-ownership="none" caller-allocates="1">
 					<type name="Astal.MotionEvent" c:type="AstalMotionEvent*" />
 				</instance-parameter>
 				<parameter name="event" transfer-ownership="none">
