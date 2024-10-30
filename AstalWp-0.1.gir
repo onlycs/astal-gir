@@ -1,0 +1,2066 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="GObject" version="2.0"/>
+  <include name="Gio" version="2.0"/>
+  <package name="astal-wireplumber-0.1"/>
+  <c:include name="astal-wp.h"/>
+  <namespace name="AstalWp"
+             version="0.1"
+             shared-library="libastal-wireplumber.so.0"
+             c:identifier-prefixes="AstalWp"
+             c:symbol-prefixes="astal_wp">
+    <class name="Audio"
+           c:symbol-prefix="audio"
+           c:type="AstalWpAudio"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpAudio"
+           glib:get-type="astal_wp_audio_get_type"
+           glib:type-struct="AudioClass">
+      <doc xml:space="preserve"
+           filename="src/audio.c"
+           line="53">is instanciated by [class@AstalWp.Wp]. An instance of class can only be received there.
+
+ This is a convinience class and acts as a filter for [class@AstalWp.Wp] to filter for audio
+endpoints and devices.</doc>
+      <source-position filename="include/astal/wireplumber/audio.h" line="13"/>
+      <constructor name="new" c:identifier="astal_wp_audio_new">
+        <source-position filename="include/astal/wireplumber/wp.h" line="43"/>
+        <return-value transfer-ownership="full">
+          <type name="Audio" c:type="AstalWpAudio*"/>
+        </return-value>
+        <parameters>
+          <parameter name="wp" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <method name="get_default_microphone"
+              c:identifier="astal_wp_audio_get_default_microphone"
+              glib:get-property="default-microphone">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="287">gets the default microphone object</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="23"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_default_speaker"
+              c:identifier="astal_wp_audio_get_default_speaker"
+              glib:get-property="default-speaker">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="275">gets the default speaker object</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="22"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_device" c:identifier="astal_wp_audio_get_device">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="134">gets the device with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="20"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Device" c:type="AstalWpDevice*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="136">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="137">the id of the device</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_devices"
+              c:identifier="astal_wp_audio_get_devices"
+              glib:get-property="devices">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="237">a GList containing the devices</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="29"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Device"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="239">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_endpoint" c:identifier="astal_wp_audio_get_endpoint">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="259">the endpoint with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="19"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="261">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="262">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_microphone"
+              c:identifier="astal_wp_audio_get_microphone">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="80">gets the microphone with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="16"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="82">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="83">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_microphones"
+              c:identifier="astal_wp_audio_get_microphones"
+              glib:get-property="microphones">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="149">a GList containing the microphones</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="25"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="151">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_recorder" c:identifier="astal_wp_audio_get_recorder">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="98">gets the recorder with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="17"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="100">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="101">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_recorders"
+              c:identifier="astal_wp_audio_get_recorders"
+              glib:get-property="recorders">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="193">a GList containing the recorders</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="27"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="195">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_speaker" c:identifier="astal_wp_audio_get_speaker">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="62">gets the speaker with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="15"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="64">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="65">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_speakers"
+              c:identifier="astal_wp_audio_get_speakers"
+              glib:get-property="speakers">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="171">a GList containing the speakers</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="26"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="173">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_stream" c:identifier="astal_wp_audio_get_stream">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="116">gets the stream with the given id</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="18"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="118">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="119">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_streams"
+              c:identifier="astal_wp_audio_get_streams"
+              glib:get-property="streams">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="215">a GList containing the streams</doc>
+        <source-position filename="include/astal/wireplumber/audio.h"
+                         line="28"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/audio.c"
+                 line="217">the AstalWpAudio object</doc>
+            <type name="Audio" c:type="AstalWpAudio*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="default-microphone"
+                transfer-ownership="none"
+                getter="get_default_microphone">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="470">The AstalWndpoint object representing the default speaker</doc>
+        <type name="Endpoint"/>
+      </property>
+      <property name="default-speaker"
+                transfer-ownership="none"
+                getter="get_default_speaker">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="462">The AstalWndpoint object representing the default speaker</doc>
+        <type name="Endpoint"/>
+      </property>
+      <property name="devices"
+                transfer-ownership="container"
+                getter="get_devices">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="455">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Device"/>
+        </type>
+      </property>
+      <property name="microphones"
+                transfer-ownership="container"
+                getter="get_microphones">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="427">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="recorders"
+                transfer-ownership="container"
+                getter="get_recorders">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="441">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="speakers"
+                transfer-ownership="container"
+                getter="get_speakers">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="434">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="streams"
+                transfer-ownership="container"
+                getter="get_streams">
+        <doc xml:space="preserve"
+             filename="src/audio.c"
+             line="448">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <glib:signal name="device-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="device-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="microphone-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="microphone-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="recorder-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="recorder-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="speaker-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="speaker-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="stream-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="stream-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="AudioClass"
+            c:type="AstalWpAudioClass"
+            glib:is-gtype-struct-for="Audio">
+      <source-position filename="include/astal/wireplumber/audio.h" line="13"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <class name="Device"
+           c:symbol-prefix="device"
+           c:type="AstalWpDevice"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpDevice"
+           glib:get-type="astal_wp_device_get_type"
+           glib:type-struct="DeviceClass">
+      <source-position filename="include/astal/wireplumber/device.h"
+                       line="12"/>
+      <method name="get_active_profile"
+              c:identifier="astal_wp_device_get_active_profile">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="80">gets the currently active profile of this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="24"/>
+        <return-value transfer-ownership="none">
+          <type name="gint" c:type="gint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="82">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_description"
+              c:identifier="astal_wp_device_get_description"
+              glib:get-property="description">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="50">gets the description of this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="19"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="52">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_device_type"
+              c:identifier="astal_wp_device_get_device_type"
+              glib:get-property="device-type">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="71">gets the type of this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="25"/>
+        <return-value transfer-ownership="none">
+          <type name="DeviceType" c:type="AstalWpDeviceType"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="73">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_icon"
+              c:identifier="astal_wp_device_get_icon"
+              glib:get-property="icon">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="59">gets the icon of this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="20"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="61">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_id"
+              c:identifier="astal_wp_device_get_id"
+              glib:get-property="id">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="41">gets the id of this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="18"/>
+        <return-value transfer-ownership="none">
+          <type name="guint" c:type="guint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="43">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_profile" c:identifier="astal_wp_device_get_profile">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="110">gets the profile with the given id</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="21"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <type name="Profile" c:type="AstalWpProfile*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="112">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="113">the id of the profile</doc>
+            <type name="gint" c:type="gint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_profiles"
+              c:identifier="astal_wp_device_get_profiles"
+              glib:get-property="profiles">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="125">gets a GList containing the profiles</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="22"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <type name="GLib.List" c:type="GList*">
+            <type name="Profile"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="127">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="set_active_profile"
+              c:identifier="astal_wp_device_set_active_profile">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="89">sets the profile for this device</doc>
+        <source-position filename="include/astal/wireplumber/device.h"
+                         line="23"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="91">the AstalWpDevice object</doc>
+            <type name="Device" c:type="AstalWpDevice*"/>
+          </instance-parameter>
+          <parameter name="profile_id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/device.c"
+                 line="92">the id of the profile</doc>
+            <type name="gint" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="active-profile-id"
+                writable="1"
+                transfer-ownership="none"
+                default-value="0">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="360">The id of the currently active profile.</doc>
+        <type name="gint" c:type="gint"/>
+      </property>
+      <property name="description"
+                transfer-ownership="none"
+                getter="get_description"
+                default-value="NULL">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="331">The description of this device.</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="device-type"
+                transfer-ownership="none"
+                getter="get_device_type"
+                default-value="ASTAL_WP_DEVICE_TYPE_VIDEO">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="345">The type of this device</doc>
+        <type name="DeviceType"/>
+      </property>
+      <property name="icon"
+                transfer-ownership="none"
+                getter="get_icon"
+                default-value="NULL">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="338">The icon name for this device.</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="id"
+                transfer-ownership="none"
+                getter="get_id"
+                default-value="0">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="324">The id of this device.</doc>
+        <type name="guint" c:type="guint"/>
+      </property>
+      <property name="profiles"
+                transfer-ownership="container"
+                getter="get_profiles">
+        <doc xml:space="preserve"
+             filename="src/device.c"
+             line="353">A list of available profiles</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Profile"/>
+        </type>
+      </property>
+    </class>
+    <record name="DeviceClass"
+            c:type="AstalWpDeviceClass"
+            glib:is-gtype-struct-for="Device">
+      <source-position filename="include/astal/wireplumber/device.h"
+                       line="12"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <enumeration name="DeviceType" c:type="AstalWpDeviceType">
+      <source-position filename="include/astal/wireplumber/device.h"
+                       line="16"/>
+      <member name="audio" value="0" c:identifier="ASTAL_WP_DEVICE_TYPE_AUDIO">
+      </member>
+      <member name="video" value="1" c:identifier="ASTAL_WP_DEVICE_TYPE_VIDEO">
+      </member>
+    </enumeration>
+    <class name="Endpoint"
+           c:symbol-prefix="endpoint"
+           c:type="AstalWpEndpoint"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpEndpoint"
+           glib:get-type="astal_wp_endpoint_get_type"
+           glib:type-struct="EndpointClass">
+      <source-position filename="include/astal/wireplumber/endpoint.h"
+                       line="10"/>
+      <method name="get_description"
+              c:identifier="astal_wp_endpoint_get_description"
+              glib:get-property="description">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="217">gets the description of this endpoint</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="36"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="219">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_icon"
+              c:identifier="astal_wp_endpoint_get_icon"
+              glib:get-property="icon">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="233">gets the icon for this endpoint</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="38"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="235">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_id"
+              c:identifier="astal_wp_endpoint_get_id"
+              glib:get-property="id">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="193">gets the id of the endpoint.</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="33"/>
+        <return-value transfer-ownership="none">
+          <type name="guint" c:type="guint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="195">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_is_default"
+              c:identifier="astal_wp_endpoint_get_is_default"
+              glib:get-property="is-default">
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="27"/>
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_lock_channels"
+              c:identifier="astal_wp_endpoint_get_lock_channels"
+              glib:get-property="lock-channels">
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="29"/>
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_media_class"
+              c:identifier="astal_wp_endpoint_get_media_class"
+              glib:get-property="media-class">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="185">gets the media class of the endpoint.</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="32"/>
+        <return-value transfer-ownership="none">
+          <type name="MediaClass" c:type="AstalWpMediaClass"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="187">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_mute"
+              c:identifier="astal_wp_endpoint_get_mute"
+              glib:get-property="mute">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="201">gets the mute status of the endpoint.</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="34"/>
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="203">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_name"
+              c:identifier="astal_wp_endpoint_get_name"
+              glib:get-property="name">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="225">gets the name of this endpoint</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="37"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="227">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_volume"
+              c:identifier="astal_wp_endpoint_get_volume"
+              glib:get-property="volume">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="209">gets the volume</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="35"/>
+        <return-value transfer-ownership="none">
+          <type name="gdouble" c:type="gdouble"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="211">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_volume_icon"
+              c:identifier="astal_wp_endpoint_get_volume_icon"
+              glib:get-property="volume-icon">
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="39"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="set_is_default"
+              c:identifier="astal_wp_endpoint_set_is_default"
+              glib:set-property="is-default">
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="28"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+          <parameter name="is_default" transfer-ownership="none">
+            <type name="gboolean" c:type="gboolean"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_lock_channels"
+              c:identifier="astal_wp_endpoint_set_lock_channels"
+              glib:set-property="lock-channels">
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="30"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+          <parameter name="lock_channels" transfer-ownership="none">
+            <type name="gboolean" c:type="gboolean"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_mute"
+              c:identifier="astal_wp_endpoint_set_mute"
+              glib:set-property="mute">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="166">Sets the mute status for the endpoint.</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="26"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="168">the AstalWpEndpoint instance.</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+          <parameter name="mute" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="169">A boolean indicating whether to mute the endpoint.</doc>
+            <type name="gboolean" c:type="gboolean"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_volume"
+              c:identifier="astal_wp_endpoint_set_volume"
+              glib:set-property="volume">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="111">Sets the volume level for this endpoint. The volume is clamped to be between
+0 and 1.5.</doc>
+        <source-position filename="include/astal/wireplumber/endpoint.h"
+                         line="25"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="113">the AstalWpEndpoint object</doc>
+            <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+          </instance-parameter>
+          <parameter name="volume" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/endpoint.c"
+                 line="114">The new volume level to set.</doc>
+            <type name="gdouble" c:type="gdouble"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="description"
+                transfer-ownership="none"
+                getter="get_description"
+                default-value="NULL">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="565">The description of this endpoint</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="icon"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none"
+                getter="get_icon"
+                default-value="audio-card-symbolic">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="579">The icon of this endpoint. Note that endpoints do not have icons associated with them in
+pipewire, so the icon of the associated device is used instead.</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="id"
+                transfer-ownership="none"
+                getter="get_id"
+                default-value="0">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="544">The pipewire id of this endpoint.</doc>
+        <type name="guint" c:type="guint"/>
+      </property>
+      <property name="is-default"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_is_default"
+                getter="get_is_default"
+                default-value="FALSE">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="602">Whether this endpoint is the default one used for this media-class. Note that setting this
+property to false has no effect.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="lock-channels"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_lock_channels"
+                getter="get_lock_channels"
+                default-value="FALSE">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="610">Whether to lock the channels together or not.</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="media-class"
+                transfer-ownership="none"
+                getter="get_media_class"
+                default-value="ASTAL_WP_MEDIA_CLASS_AUDIO_SPEAKER">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="594">The media class of this endpoint</doc>
+        <type name="MediaClass"/>
+      </property>
+      <property name="mute"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_mute"
+                getter="get_mute"
+                default-value="TRUE">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="558">The mute state of this endpoint</doc>
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="name"
+                transfer-ownership="none"
+                getter="get_name"
+                default-value="NULL">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="572">The name of this endpoint</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="volume"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_volume"
+                getter="get_volume"
+                default-value="0.000000">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="551">The volume of this endpoint</doc>
+        <type name="gdouble" c:type="gdouble"/>
+      </property>
+      <property name="volume-icon"
+                transfer-ownership="none"
+                getter="get_volume_icon"
+                default-value="audio-volume-muted">
+        <doc xml:space="preserve"
+             filename="src/endpoint.c"
+             line="587">The volume icon of this endpoint</doc>
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+    </class>
+    <record name="EndpointClass"
+            c:type="AstalWpEndpointClass"
+            glib:is-gtype-struct-for="Endpoint">
+      <source-position filename="include/astal/wireplumber/endpoint.h"
+                       line="10"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <constant name="MAJOR_VERSION" value="0" c:type="ASTAL_WP_MAJOR_VERSION">
+      <source-position filename="include/astal-wp.h" line="9"/>
+      <type name="gint" c:type="gint"/>
+    </constant>
+    <constant name="MICRO_VERSION" value="0" c:type="ASTAL_WP_MICRO_VERSION">
+      <source-position filename="include/astal-wp.h" line="11"/>
+      <type name="gint" c:type="gint"/>
+    </constant>
+    <constant name="MINOR_VERSION" value="1" c:type="ASTAL_WP_MINOR_VERSION">
+      <source-position filename="include/astal-wp.h" line="10"/>
+      <type name="gint" c:type="gint"/>
+    </constant>
+    <enumeration name="MediaClass" c:type="AstalWpMediaClass">
+      <source-position filename="include/astal/wireplumber/endpoint.h"
+                       line="23"/>
+      <member name="audio_microphone"
+              value="0"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_AUDIO_MICROPHONE">
+      </member>
+      <member name="audio_speaker"
+              value="1"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_AUDIO_SPEAKER">
+      </member>
+      <member name="audio_recorder"
+              value="2"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_AUDIO_RECORDER">
+      </member>
+      <member name="audio_stream"
+              value="3"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_AUDIO_STREAM">
+      </member>
+      <member name="video_source"
+              value="4"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_VIDEO_SOURCE">
+      </member>
+      <member name="video_sink"
+              value="5"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_VIDEO_SINK">
+      </member>
+      <member name="video_recorder"
+              value="6"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_VIDEO_RECORDER">
+      </member>
+      <member name="video_stream"
+              value="7"
+              c:identifier="ASTAL_WP_MEDIA_CLASS_VIDEO_STREAM">
+      </member>
+    </enumeration>
+    <class name="Profile"
+           c:symbol-prefix="profile"
+           c:type="AstalWpProfile"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpProfile"
+           glib:get-type="astal_wp_profile_get_type"
+           glib:type-struct="ProfileClass">
+      <source-position filename="include/astal/wireplumber/profile.h"
+                       line="10"/>
+      <method name="get_description"
+              c:identifier="astal_wp_profile_get_description"
+              glib:get-property="description">
+        <source-position filename="include/astal/wireplumber/profile.h"
+                         line="13"/>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Profile" c:type="AstalWpProfile*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_index"
+              c:identifier="astal_wp_profile_get_index"
+              glib:get-property="index">
+        <source-position filename="include/astal/wireplumber/profile.h"
+                         line="12"/>
+        <return-value transfer-ownership="none">
+          <type name="gint" c:type="gint"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Profile" c:type="AstalWpProfile*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="description"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none"
+                getter="get_description"
+                default-value="NULL">
+        <type name="utf8" c:type="gchar*"/>
+      </property>
+      <property name="index"
+                writable="1"
+                construct-only="1"
+                transfer-ownership="none"
+                getter="get_index"
+                default-value="0">
+        <type name="gint" c:type="gint"/>
+      </property>
+    </class>
+    <record name="ProfileClass"
+            c:type="AstalWpProfileClass"
+            glib:is-gtype-struct-for="Profile">
+      <source-position filename="include/astal/wireplumber/profile.h"
+                       line="10"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <enumeration name="Scale" c:type="AstalWpScale">
+      <source-position filename="include/astal/wireplumber/wp.h" line="18"/>
+      <member name="linear" value="0" c:identifier="ASTAL_WP_SCALE_LINEAR">
+      </member>
+      <member name="cubic" value="1" c:identifier="ASTAL_WP_SCALE_CUBIC">
+      </member>
+    </enumeration>
+    <constant name="VERSION" value="0.1.0" c:type="ASTAL_WP_VERSION">
+      <source-position filename="include/astal-wp.h" line="12"/>
+      <type name="utf8" c:type="gchar*"/>
+    </constant>
+    <class name="Video"
+           c:symbol-prefix="video"
+           c:type="AstalWpVideo"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpVideo"
+           glib:get-type="astal_wp_video_get_type"
+           glib:type-struct="VideoClass">
+      <doc xml:space="preserve"
+           filename="src/video.c"
+           line="50">is instanciated by [class@AstalWp.Wp]. An instance of class can only be received there.
+
+ This is a convinience class and acts as a filter for [class@AstalWp.Wp] to filter for video
+endpoints and devices.</doc>
+      <source-position filename="include/astal/wireplumber/video.h" line="13"/>
+      <constructor name="new" c:identifier="astal_wp_video_new">
+        <source-position filename="include/astal/wireplumber/wp.h" line="42"/>
+        <return-value transfer-ownership="full">
+          <type name="Video" c:type="AstalWpVideo*"/>
+        </return-value>
+        <parameters>
+          <parameter name="wp" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <method name="get_device" c:identifier="astal_wp_video_get_device">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="131">the device with the given id</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="19"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="138">the device with the given id</doc>
+          <type name="Device" c:type="AstalWpDevice*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="133">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="134">the id of the device</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_devices"
+              c:identifier="astal_wp_video_get_devices"
+              glib:get-property="devices">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="240">a list containing the devices</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="25"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="246">a GList containing the
+devices</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Device"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="242">the AstalWpAudio object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_recorder" c:identifier="astal_wp_video_get_recorder">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="113">the recorder with the given id</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="17"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="120">the recorder with the given id</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="115">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="116">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_recorders"
+              c:identifier="astal_wp_video_get_recorders"
+              glib:get-property="recorders">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="194">a list containing the video recorders</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="23"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="200">a GList containing the
+video recorders</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="196">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_sink" c:identifier="astal_wp_video_get_sink">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="77">the sink with the given id</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="16"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="84">the sink with the given id</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="79">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="80">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_sinks"
+              c:identifier="astal_wp_video_get_sinks"
+              glib:get-property="sinks">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="171">a list containing the video sinks</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="22"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="177">a GList containing the
+video sinks</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="173">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_source" c:identifier="astal_wp_video_get_source">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="59">the source with the given id</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="15"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="66">the source with the given id</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="61">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="62">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_sources"
+              c:identifier="astal_wp_video_get_sources"
+              glib:get-property="sources">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="148">a list containing the video sources</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="21"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="154">a GList containing the
+video sources</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="150">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_stream" c:identifier="astal_wp_video_get_stream">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="95">the stream with the given id</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="18"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="102">the stream with the given id</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="97">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="98">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_streams"
+              c:identifier="astal_wp_video_get_streams"
+              glib:get-property="streams">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="217">a list containing the video streams</doc>
+        <source-position filename="include/astal/wireplumber/video.h"
+                         line="24"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/video.c"
+               line="223">a GList containing the
+video streams</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/video.c"
+                 line="219">the AstalWpVideo object</doc>
+            <type name="Video" c:type="AstalWpVideo*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <property name="devices"
+                transfer-ownership="container"
+                getter="get_devices">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="416">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="recorders"
+                transfer-ownership="none"
+                getter="get_recorders">
+        <type name="gpointer" c:type="gpointer"/>
+      </property>
+      <property name="sinks" transfer-ownership="container" getter="get_sinks">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="392">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="sources"
+                transfer-ownership="container"
+                getter="get_sources">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="384">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="streams"
+                transfer-ownership="container"
+                getter="get_streams">
+        <doc xml:space="preserve"
+             filename="src/video.c"
+             line="408">A list of AstalWpEndpoint objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <glib:signal name="device-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="device-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="recorder-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="recorder-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="sink-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="sink-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="source-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="source-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="stream-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="stream-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="VideoClass"
+            c:type="AstalWpVideoClass"
+            glib:is-gtype-struct-for="Video">
+      <source-position filename="include/astal/wireplumber/video.h" line="13"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <class name="Wp"
+           c:symbol-prefix="wp"
+           c:type="AstalWpWp"
+           parent="GObject.Object"
+           final="1"
+           glib:type-name="AstalWpWp"
+           glib:get-type="astal_wp_wp_get_type"
+           glib:type-struct="WpClass">
+      <doc xml:space="preserve"
+           filename="src/wireplumber.c"
+           line="69">manages the connection to wireplumber. Usually you don't want to use this class directly, but use
+the [class@AstalWp.Audio] or [class@AstalWp.Video] instead.</doc>
+      <source-position filename="include/astal/wireplumber/wp.h" line="22"/>
+      <function name="get_default" c:identifier="astal_wp_wp_get_default">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="376">gets the default wireplumber object.</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="24"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="381">gets the default wireplumber object.</doc>
+          <type name="Wp" c:type="AstalWpWp*"/>
+        </return-value>
+      </function>
+      <method name="get_audio"
+              c:identifier="astal_wp_wp_get_audio"
+              glib:get-property="audio">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="137">gets the [class@AstalWp.Audio] object</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="27"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="142">gets the audio object</doc>
+          <type name="Audio" c:type="AstalWpAudio*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_default_microphone"
+              c:identifier="astal_wp_wp_get_default_microphone"
+              glib:get-property="default-microphone">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="164">gets the default microphone object</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="37"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="169">gets the default microphone object</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_default_speaker"
+              c:identifier="astal_wp_wp_get_default_speaker"
+              glib:get-property="default-speaker">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="155">gets the default speaker object</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="36"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="160">gets the default speaker object</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_device" c:identifier="astal_wp_wp_get_device">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="107">the device with the given id</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="33"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="114">the device with the given id</doc>
+          <type name="Device" c:type="AstalWpDevice*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="109">the AstalWpWp object</doc>
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="110">the id of the device</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_devices"
+              c:identifier="astal_wp_wp_get_devices"
+              glib:get-property="devices">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="123">the GList containing the devices</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="34"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="129">a GList containing the
+devices</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Device"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="125">the AstalWpWp object</doc>
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_endpoint" c:identifier="astal_wp_wp_get_endpoint">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="77">the endpoint with the given id</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="30"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="84">the endpoint with the given id</doc>
+          <type name="Endpoint" c:type="AstalWpEndpoint*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="79">the AstalWpWp object</doc>
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+          <parameter name="id" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="80">the id of the endpoint</doc>
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_endpoints"
+              c:identifier="astal_wp_wp_get_endpoints"
+              glib:get-property="endpoints">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="93">a GList containing all endpoints</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="31"/>
+        <return-value transfer-ownership="container" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="99">a GList containing the
+endpoints</doc>
+          <type name="GLib.List" c:type="GList*">
+            <type name="Endpoint"/>
+          </type>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/wireplumber.c"
+                 line="95">the AstalWpWp object</doc>
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_scale"
+              c:identifier="astal_wp_wp_get_scale"
+              glib:get-property="scale">
+        <source-position filename="include/astal/wireplumber/wp.h" line="39"/>
+        <return-value transfer-ownership="none">
+          <type name="Scale" c:type="AstalWpScale"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_video"
+              c:identifier="astal_wp_wp_get_video"
+              glib:get-property="video">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="146">gets the video object</doc>
+        <source-position filename="include/astal/wireplumber/wp.h" line="28"/>
+        <return-value transfer-ownership="none" nullable="1">
+          <doc xml:space="preserve"
+               filename="src/wireplumber.c"
+               line="151">gets the video object</doc>
+          <type name="Video" c:type="AstalWpVideo*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="set_scale"
+              c:identifier="astal_wp_wp_set_scale"
+              glib:set-property="scale">
+        <source-position filename="include/astal/wireplumber/wp.h" line="40"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="Wp" c:type="AstalWpWp*"/>
+          </instance-parameter>
+          <parameter name="scale" transfer-ownership="none">
+            <type name="Scale" c:type="AstalWpScale"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="audio" transfer-ownership="none" getter="get_audio">
+        <type name="Audio"/>
+      </property>
+      <property name="default-microphone"
+                transfer-ownership="none"
+                getter="get_default_microphone">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="531">The [class@AstalWp.Endpoint] representing the default speaker</doc>
+        <type name="Endpoint"/>
+      </property>
+      <property name="default-speaker"
+                transfer-ownership="none"
+                getter="get_default_speaker">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="523">The [class@AstalWp.Endpoint] representing the default speaker</doc>
+        <type name="Endpoint"/>
+      </property>
+      <property name="devices"
+                transfer-ownership="container"
+                getter="get_devices">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="516">A list of [class@AstalWp.Device] objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Device"/>
+        </type>
+      </property>
+      <property name="endpoints"
+                transfer-ownership="container"
+                getter="get_endpoints">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="509">A list of [class@AstalWp.Endpoint] objects</doc>
+        <type name="GLib.List" c:type="gpointer">
+          <type name="Endpoint"/>
+        </type>
+      </property>
+      <property name="scale"
+                writable="1"
+                construct="1"
+                transfer-ownership="none"
+                setter="set_scale"
+                getter="get_scale"
+                default-value="ASTAL_WP_SCALE_CUBIC">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="500">The scale used for the volume</doc>
+        <type name="Scale"/>
+      </property>
+      <property name="video" transfer-ownership="none" getter="get_video">
+        <type name="Video"/>
+      </property>
+      <glib:signal name="device-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="device-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Device"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="endpoint-added" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+      <glib:signal name="endpoint-removed" when="first">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Endpoint"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="WpClass"
+            c:type="AstalWpWpClass"
+            glib:is-gtype-struct-for="Wp">
+      <source-position filename="include/astal/wireplumber/wp.h" line="22"/>
+      <field name="parent_class">
+        <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <function name="get_default" c:identifier="astal_wp_get_default">
+      <doc xml:space="preserve"
+           filename="src/wireplumber.c"
+           line="391">gets the default wireplumber object.</doc>
+      <source-position filename="include/astal/wireplumber/wp.h" line="25"/>
+      <return-value transfer-ownership="none" nullable="1">
+        <doc xml:space="preserve"
+             filename="src/wireplumber.c"
+             line="396">gets the default wireplumber object.</doc>
+        <type name="Wp" c:type="AstalWpWp*"/>
+      </return-value>
+    </function>
+  </namespace>
+</repository>
