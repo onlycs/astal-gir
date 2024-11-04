@@ -217,11 +217,11 @@
 			</parameters>
 		</method>
 		<property name="adapter">
-			<type name="GLib.ObjectPath" c:type="char*"/>
+			<type name="utf8" c:type="char*"/>
 		</property>
 		<method name="get_adapter" c:identifier="astal_bluetooth_device_get_adapter">
 			<return-value transfer-ownership="full">
-				<type name="GLib.ObjectPath" c:type="char*"/>
+				<type name="utf8" c:type="char*"/>
 			</return-value>
 			<parameters>
 				<instance-parameter name="self" transfer-ownership="none">
