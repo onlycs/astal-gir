@@ -1402,7 +1402,7 @@ stretched across the screen in that direction.</doc>
 						<type name="Astal.Window" c:type="AstalWindow*" />
 					</instance-parameter>
 					<parameter name="value" transfer-ownership="none">
-						<type name="gint" c:type="gint" />
+						<type name="Astal.WindowAnchor" c:type="AstalWindowAnchor*" />
 					</parameter>
 				</parameters>
 			</method>
