@@ -20,10 +20,10 @@
 		</enumeration>
 		<enumeration name="WindowAnchor" c:type="AstalWindowAnchor" glib:type-name="AstalWindowAnchor" glib:get-type="astal_window_anchor_get_type">
 			<member name="none" c:identifier="ASTAL_WINDOW_ANCHOR_NONE" value="0" />
-			<member name="top" c:identifier="ASTAL_WINDOW_ANCHOR_TOP" value="1" />
-			<member name="right" c:identifier="ASTAL_WINDOW_ANCHOR_RIGHT" value="2" />
-			<member name="left" c:identifier="ASTAL_WINDOW_ANCHOR_LEFT" value="4" />
-			<member name="bottom" c:identifier="ASTAL_WINDOW_ANCHOR_BOTTOM" value="8" />
+			<member name="top" c:identifier="ASTAL_WINDOW_ANCHOR_TOP" value="2" />
+			<member name="right" c:identifier="ASTAL_WINDOW_ANCHOR_RIGHT" value="4" />
+			<member name="left" c:identifier="ASTAL_WINDOW_ANCHOR_LEFT" value="8" />
+			<member name="bottom" c:identifier="ASTAL_WINDOW_ANCHOR_BOTTOM" value="16" />
 		</enumeration>
 		<enumeration name="Exclusivity" c:type="AstalExclusivity" glib:type-name="AstalExclusivity" glib:get-type="astal_exclusivity_get_type">
 			<member name="normal" c:identifier="ASTAL_EXCLUSIVITY_NORMAL" value="0" />
