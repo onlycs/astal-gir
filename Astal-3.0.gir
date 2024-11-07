@@ -1381,11 +1381,11 @@ Its css selector is `scrollable`. Its child getter returns the child of the inne
 				<doc xml:whitespace="preserve">Edges to anchor the window to.
 If two perpendicular edges are anchored, the surface will be anchored to that corner. If two opposite edges are anchored, the window will be 
 stretched across the screen in that direction.</doc>
-				<type name="gint" c:type="gint" />
+				<type name="Astal.WindowAnchor" c:type="AstalWindowAnchor" />
 			</property>
 			<method name="get_anchor" c:identifier="astal_window_get_anchor">
 				<return-value transfer-ownership="none">
-					<type name="gint" c:type="gint" />
+					<type name="Astal.WindowAnchor" c:type="AstalWindowAnchor" />
 				</return-value>
 				<parameters>
 					<instance-parameter name="self" transfer-ownership="none">
