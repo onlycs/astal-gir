@@ -7,12 +7,12 @@
 <package name="astal-hyprland"/>
 <c:include name="astal-hyprland.h"/>
 <namespace name="AstalHyprland" version="0.1" c:prefix="AstalHyprland" c:identifier-prefixes="AstalHyprland" c:symbol-prefixes="astal_hyprland">
-	<enumeration name="Fullscreen" c:type="AstalHyprlandFullscreen" glib:type-name="AstalHyprlandFullscreen" glib:get-type="astal_hyprland_fullscreen_get_type">
+	<bitfield name="Fullscreen" c:type="AstalHyprlandFullscreen" glib:type-name="AstalHyprlandFullscreen" glib:get-type="astal_hyprland_fullscreen_get_type">
 		<member name="current" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_CURRENT" value="-1"/>
 		<member name="none" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_NONE" value="0"/>
-		<member name="fullscreen" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_FULLSCREEN" value="1"/>
-		<member name="maximized" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_MAXIMIZED" value="2"/>
-	</enumeration>
+		<member name="maximized" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_MAXIMIZED" value="1"/>
+		<member name="fullscreen" c:identifier="ASTAL_HYPRLAND_FULLSCREEN_FULLSCREEN" value="2"/>
+	</bitfield>
 	<class name="Client" c:type="AstalHyprlandClient" c:symbol-prefix="client" glib:type-name="AstalHyprlandClient" glib:get-type="astal_hyprland_client_get_type" glib:type-struct="ClientClass" parent="GObject.Object">
 		<field name="parent_instance" readable="0" private="1">
 			<type name="GObject.Object" c:type="GObject"/>

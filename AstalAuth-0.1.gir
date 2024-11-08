@@ -62,7 +62,7 @@ was emitted.</doc>
                 glib:finish-func="authenticate_finish">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="364">Requests authentication of the provided password using the PAM (Pluggable Authentication Modules)
+             line="363">Requests authentication of the provided password using the PAM (Pluggable Authentication Modules)
 system.</doc>
         <source-position filename="include/astal-auth.h" line="31"/>
         <return-value transfer-ownership="none">
@@ -72,7 +72,7 @@ system.</doc>
           <parameter name="password" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="366">the password to be authenticated</doc>
+                 line="365">the password to be authenticated</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
           <parameter name="result_callback"
@@ -83,7 +83,7 @@ system.</doc>
                      closure="2">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="367">a GAsyncReadyCallback
+                 line="366">a GAsyncReadyCallback
   to call when the request is satisfied</doc>
             <type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
           </parameter>
@@ -93,7 +93,7 @@ system.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="369">the data to pass to callback function</doc>
+                 line="368">the data to pass to callback function</doc>
             <type name="gpointer" c:type="gpointer"/>
           </parameter>
         </parameters>
@@ -116,12 +116,12 @@ system.</doc>
               glib:get-property="service">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="164">Fetches the service from AsalAuthPam object.</doc>
+             line="163">Fetches the service from AsalAuthPam object.</doc>
         <source-position filename="include/astal-auth.h" line="25"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/pam.c"
-               line="170">the service of the AsalAuthPam object. This string is
+               line="169">the service of the AsalAuthPam object. This string is
 owned by the object and must not be modified or freed.</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
@@ -129,7 +129,7 @@ owned by the object and must not be modified or freed.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="166">a AstalAuthPam</doc>
+                 line="165">a AstalAuthPam</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
         </parameters>
@@ -139,12 +139,12 @@ owned by the object and must not be modified or freed.</doc>
               glib:get-property="username">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="149">Fetches the username from AsalAuthPam object.</doc>
+             line="148">Fetches the username from AsalAuthPam object.</doc>
         <source-position filename="include/astal-auth.h" line="21"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/pam.c"
-               line="155">the username of the AsalAuthPam object. This string is
+               line="154">the username of the AsalAuthPam object. This string is
 owned by the object and must not be modified or freed.</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
@@ -152,7 +152,7 @@ owned by the object and must not be modified or freed.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="151">a AstalAuthPam object</doc>
+                 line="150">a AstalAuthPam object</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
         </parameters>
@@ -162,7 +162,7 @@ owned by the object and must not be modified or freed.</doc>
               glib:set-property="service">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="128">Sets the service to be used for authentication. This must be set to
+             line="127">Sets the service to be used for authentication. This must be set to
 before calling start_authenticate.
 Changing it afterwards has no effect on the authentication process.
 
@@ -175,13 +175,13 @@ Defaults to `astal-auth`.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="130">a AstalAuthPam object</doc>
+                 line="129">a AstalAuthPam object</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
           <parameter name="service" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="131">the pam service used for authentication</doc>
+                 line="130">the pam service used for authentication</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -191,7 +191,7 @@ Defaults to `astal-auth`.</doc>
               glib:set-property="username">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="87">Sets the username to be used for authentication. This must be set to
+             line="86">Sets the username to be used for authentication. This must be set to
 before calling start_authenticate.
 Changing it afterwards has no effect on the authentication process.
 
@@ -204,13 +204,13 @@ Defaults to the owner of the process.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="89">a AstalAuthPam object</doc>
+                 line="88">a AstalAuthPam object</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
           <parameter name="username" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="90">the new username</doc>
+                 line="89">the new username</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -219,7 +219,7 @@ Defaults to the owner of the process.</doc>
               c:identifier="astal_auth_pam_start_authenticate">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="346">starts a new authentication process using the PAM (Pluggable Authentication Modules) system.
+             line="345">starts a new authentication process using the PAM (Pluggable Authentication Modules) system.
 Note that this will cancel an already running authentication process
 associated with this AstalAuthPam object.</doc>
         <source-position filename="include/astal-auth.h" line="27"/>
@@ -230,7 +230,7 @@ associated with this AstalAuthPam object.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="348">a AstalAuthPam Object</doc>
+                 line="347">a AstalAuthPam Object</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
         </parameters>
@@ -238,7 +238,7 @@ associated with this AstalAuthPam object.</doc>
       <method name="supply_secret" c:identifier="astal_auth_pam_supply_secret">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="108">provides pam with a secret. This method must be called exactly once after a
+             line="107">provides pam with a secret. This method must be called exactly once after a
 auth-* signal is emitted.</doc>
         <source-position filename="include/astal-auth.h" line="29"/>
         <return-value transfer-ownership="none">
@@ -248,7 +248,7 @@ auth-* signal is emitted.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="110">a AstalAuthPam Object</doc>
+                 line="109">a AstalAuthPam Object</doc>
             <type name="Pam" c:type="AstalAuthPam*"/>
           </instance-parameter>
           <parameter name="secret"
@@ -257,7 +257,7 @@ auth-* signal is emitted.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="111">the secret to be provided to pam. Can be NULL.</doc>
+                 line="110">the secret to be provided to pam. Can be NULL.</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -271,7 +271,7 @@ auth-* signal is emitted.</doc>
                 default-value="astal-auth">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="438">The pam service used for authentication.
+             line="437">The pam service used for authentication.
 Changing the value of this property has no affect on an already started authentication
 process.
 
@@ -287,7 +287,7 @@ Defaults to the astal-auth pam service.</doc>
                 default-value="angad">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="426">The username used for authentication.
+             line="425">The username used for authentication.
 Changing the value of this property has no affect on an already started authentication
 process.
 
@@ -297,7 +297,7 @@ Defaults to the user that owns this process.</doc>
       <glib:signal name="auth-error" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="493">This signal is emitted when an authentication error has occured.
+             line="492">This signal is emitted when an authentication error has occured.
 
 This signal has to be matched with exaclty one supply_secret call.</doc>
         <return-value transfer-ownership="none">
@@ -307,7 +307,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
           <parameter name="msg" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="496">the error message</doc>
+                 line="495">the error message</doc>
             <type name="utf8" c:type="gchar*"/>
           </parameter>
         </parameters>
@@ -315,7 +315,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
       <glib:signal name="auth-info" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="479">This signal is emitted when the user should receive an information (e.g., tell the user to
+             line="478">This signal is emitted when the user should receive an information (e.g., tell the user to
 touch a security key, or the remaining time pam has been locked after multiple failed
 attempts)
 
@@ -327,7 +327,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
           <parameter name="msg" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="482">the info mssage to be shown to the user</doc>
+                 line="481">the info mssage to be shown to the user</doc>
             <type name="utf8" c:type="gchar*"/>
           </parameter>
         </parameters>
@@ -335,7 +335,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
       <glib:signal name="auth-prompt-hidden" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="466">This signal is emitted when user input is required. The input should be hidden
+             line="465">This signal is emitted when user input is required. The input should be hidden
 when entered (e.g., for passwords).
 
 This signal has to be matched with exaclty one supply_secret call.</doc>
@@ -346,7 +346,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
           <parameter name="msg" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="469">the prompt to be shown to the user</doc>
+                 line="468">the prompt to be shown to the user</doc>
             <type name="utf8" c:type="gchar*"/>
           </parameter>
         </parameters>
@@ -354,7 +354,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
       <glib:signal name="auth-prompt-visible" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="453">This signal is emitted when user input is required. The input should be visible
+             line="452">This signal is emitted when user input is required. The input should be visible
 when entered (e.g., for One-Time Passwords (OTP)).
 
 This signal has to be matched with exaclty one supply_secret call.</doc>
@@ -365,7 +365,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
           <parameter name="msg" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="456">the prompt to be shown to the user</doc>
+                 line="455">the prompt to be shown to the user</doc>
             <type name="utf8" c:type="gchar*"/>
           </parameter>
         </parameters>
@@ -373,7 +373,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
       <glib:signal name="fail" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="514">This signal is emitted when authentication failed.</doc>
+             line="513">This signal is emitted when authentication failed.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -381,7 +381,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
           <parameter name="msg" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/pam.c"
-                 line="517">the authentication failure message</doc>
+                 line="516">the authentication failure message</doc>
             <type name="utf8" c:type="gchar*"/>
           </parameter>
         </parameters>
@@ -389,7 +389,7 @@ This signal has to be matched with exaclty one supply_secret call.</doc>
       <glib:signal name="success" when="first">
         <doc xml:space="preserve"
              filename="src/pam.c"
-             line="505">This signal is emitted after successful authentication</doc>
+             line="504">This signal is emitted after successful authentication</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>

@@ -237,8 +237,7 @@ This property does not have any effect on its own, its merely a value to use bet
 			</parameters>
 		</method>
 		<method name="dismiss" c:identifier="astal_notifd_notification_dismiss">
-			<doc xml:whitespace="preserve">Dismiss this notification popup
-This method doesn't have any functionality on its own, but should be handled by frontend implementation to hide notification popups.</doc>
+			<doc xml:whitespace="preserve">Resolve this notification with [enum@AstalNotifd.ClosedReason.DISMISSED_BY_USER].</doc>
 			<return-value transfer-ownership="full">
 				<type name="none" c:type="void" />
 			</return-value>
@@ -410,7 +409,7 @@ Can be invoked by calling [method@AstalNotifd.Notification.invoke] with the acti
 			</parameters>
 		</method>
 		<property name="category">
-			<doc xml:whitespace="preserve">&lt;ulink url="https://specifications.freedesktop.org/notification-spec/latest/categories.html"&gt;&lt;/ulink&gt;</doc>
+			<doc xml:whitespace="preserve">[](https://specifications.freedesktop.org/notification-spec/latest/categories.html)</doc>
 			<type name="utf8" c:type="gchar*" />
 		</property>
 		<method name="get_category" c:identifier="astal_notifd_notification_get_category">
@@ -560,13 +559,6 @@ Can be invoked by calling [method@AstalNotifd.Notification.invoke] with the acti
 					<type name="AstalNotifd.ClosedReason" c:type="AstalNotifdClosedReason" />
 				</parameter>
 			</parameters>
-		</glib:signal>
-		<glib:signal name="dismissed">
-			<doc xml:whitespace="preserve">Emitted when the user dismisses this notification.
-See also: &lt;function&gt;astal_notifd_notification_dismiss&lt;/function&gt;</doc>
-			<return-value transfer-ownership="full">
-				<type name="none" c:type="void" />
-			</return-value>
 		</glib:signal>
 		<glib:signal name="invoked">
 			<doc xml:whitespace="preserve">Emitted when an [struct@AstalNotifd.Action] of this notification is invoked.</doc>
