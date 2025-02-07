@@ -39,6 +39,23 @@ GIR_FILES = [
     "xft-2.0",
     "xlib-2.0",
     "xrandr-1.3",
+    "Astal-3.0",
+    "Astal-4.0",
+    "AstalApps-0.1",
+    "AstalAuth-0.1",
+    "AstalBattery-0.1",
+    "AstalBluetooth-0.1",
+    "AstalCava-0.1",
+    "AstalGreet-0.1",
+    "AstalHyprland-0.1",
+    "AstalIO-0.1",
+    "AstalMpris-0.1",
+    "AstalNetwork-0.1",
+    "AstalNotifd-0.1",
+    "AstalPowerProfiles-0.1",
+    "AstalRiver-0.1",
+    "AstalTray-0.1",
+    "AstalWp-0.1"
 ]
 
 dest_dir = os.path.abspath("./")
